@@ -13,17 +13,17 @@
 
 ## Редактирование данных
 
-![CC0](https://github.com/webserverby/java_projects/edit/master/TravelAgency/src/screenshots/turist_3.png)
+![CC0](https://github.com/webserverby/java_projects/blob/master/TravelAgency/src/screenshots/turist_3.png)
 
 
 ## Поиск туристов
 
-![CC0](https://github.com/webserverby/java_projects/edit/master/TravelAgency/src/screenshots/turist_4.png)
+![CC0](https://github.com/webserverby/java_projects/blob/master/TravelAgency/src/screenshots/turist_4.png)
 
 
 ## Страница туров
 
-![CC0](https://github.com/webserverby/java_projects/edit/master/TravelAgency/src/screenshots/tur.png)
+![CC0](https://github.com/webserverby/java_projects/blob/master/TravelAgency/src/screenshots/tur.png)
 
 
 
