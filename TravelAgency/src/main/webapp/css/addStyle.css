@@ -1,0 +1,60 @@
+.content{ /* Средний блок для контента*/
+	margin:37px auto 100px auto;
+	/* outline:1px solid #cccccc; */
+}
+
+form {
+	width: auto;
+	margin: 0 0 0 30px;
+}
+
+form input {
+	padding: 5px;
+	margin-bottom: 6px;
+}
+
+.input-control {
+	display: initial;
+	clear: both;
+}
+
+.tablePois {
+	margin: 0 0 0 0;
+}
+
+.tablePois th {
+	text-align: left;
+	font-style: italic;
+	color: black;
+}
+
+.tablePois th:first-child, td:first-child {
+	padding-right: 0;
+	padding-left: 0;
+	font: normal 14px Verdana, Geneva, Arial;
+}
+
+.tablePois  .input-control {
+	display: initial;
+	width: 300px;
+	clear: both;
+	margin: 3px 3px 3px 3px;
+	padding-right: 15px;
+	padding-left: 15px;
+	font: normal 13px Verdana, Geneva, Arial;
+
+}
+
+#button {
+	float: left;
+	margin: 20px 0 50px 350px;
+	width: 110px;
+	color: white;
+	font: normal 14px Verdana, Geneva, Arial;
+}
+
+.lead {
+	padding: 0 0 10px 0;
+	font: normal 21px Verdana, Geneva, Arial;
+}
+

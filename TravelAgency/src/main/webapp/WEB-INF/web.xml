@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+           version="3.0">
+
+    <display-name>ClientDatabase</display-name>
+
+<jsp-config>
+    <jsp-property-group>
+        <display-name>header_footer</display-name>
+        <url-pattern>/views/*</url-pattern>
+        <url-pattern>/index.jsp</url-pattern>
+        <page-encoding>UTF-8</page-encoding>
+        <include-prelude>/jspf/header.jsp</include-prelude>
+        <include-coda>/jspf/footer.jsp</include-coda>
+    </jsp-property-group>
+</jsp-config>
+
+    <servlet>
+        <servlet-name>IndexServlet</servlet-name>
+        <servlet-class>com.faenko.clientDatabase.servlets.IndexServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>IndexServlet</servlet-name>
+        <url-pattern>/client/index</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ClientOutputServlet</servlet-name>
+        <servlet-class>com.faenko.clientDatabase.servlets.ClientOutputServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ClientOutputServlet</servlet-name>
+        <url-pattern>/client/output_client</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ClientEditServlet</servlet-name>
+        <servlet-class>com.faenko.clientDatabase.servlets.ClientEditServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ClientEditServlet</servlet-name>
+        <url-pattern>/client/edit_client</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ClientDeleteServlet</servlet-name>
+        <servlet-class>com.faenko.clientDatabase.servlets.ClientDeleteServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ClientDeleteServlet</servlet-name>
+        <url-pattern>/client/delete_client</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ClientSearchServlet</servlet-name>
+        <servlet-class>com.faenko.clientDatabase.servlets.ClientSearchServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ClientSearchServlet</servlet-name>
+        <url-pattern>/client/search_client</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ClientAddServlet</servlet-name>
+        <servlet-class>com.faenko.clientDatabase.servlets.ClientAddServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ClientAddServlet</servlet-name>
+        <url-pattern>/client/add_client</url-pattern>
+    </servlet-mapping>
+
+
+
+    <servlet>
+        <servlet-name>TourOutputServlet</servlet-name>
+        <servlet-class>com.faenko.clientDatabase.servlets.TourOutputServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>TourOutputServlet</servlet-name>
+        <url-pattern>/tour/output_tour</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TourEditServlet</servlet-name>
+        <servlet-class>com.faenko.clientDatabase.servlets.TourEditServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>TourEditServlet</servlet-name>
+        <url-pattern>/tour/edit_tour</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TourDeleteServlet</servlet-name>
+        <servlet-class>com.faenko.clientDatabase.servlets.TourDeleteServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>TourDeleteServlet</servlet-name>
+        <url-pattern>/tour/delete_tour</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TourSearchServlet</servlet-name>
+        <servlet-class>com.faenko.clientDatabase.servlets.TourSearchServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>TourSearchServlet</servlet-name>
+        <url-pattern>/tour/search_tour</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TourAddServlet</servlet-name>
+        <servlet-class>com.faenko.clientDatabase.servlets.TourAddServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>TourAddServlet</servlet-name>
+        <url-pattern>/tour/add_tour</url-pattern>
+    </servlet-mapping>
+
+
+
+
+</web-app>

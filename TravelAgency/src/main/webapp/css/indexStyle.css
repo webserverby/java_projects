@@ -1,0 +1,21 @@
+.time{
+	float: right;
+	margin: -55px 100px 0px 0px;
+
+}
+.content{ /* Средний блок для контента*/
+	margin:50px auto 80px auto;
+	/* outline:1px solid #cccccc; */
+}
+
+p {
+	font: normal 14px Verdana, Geneva, Arial;
+	padding-right: 15px;
+	padding-left: 15px;
+	color: black;
+}
+
+.bold {
+	font: bold 14px Verdana, Geneva, Arial;
+}
+
