@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.faenko.clientDatabase.models.Passport" table="passport">
+        <id name="id" type="int">
+            <column name="uid" />
+            <generator class="identity" />
+        </id>
+        <one-to-one name="client" class="com.faenko.clientDatabase.models.Client"/>
+        <property name="series" column="series" type="string"/>
+        <property name="number" column="number" type="string"/>
+        <property name="received" column="received" type="string"/>
+        <property name="issueDate" column="issueDate" type="string"/>
+        <property name="expiryDate" column="expiryDate" type="string"/>
+
+
+        <!--
+         name - имя свойства класса
+         table - с какой таблицей будем проводить операции
+
+         В теге key прописываем зависимые столбцы
+         И создаем саму зависимость к таблице Client с помощью тега "one-to-many"
+         -->
+    </class>
+</hibernate-mapping>

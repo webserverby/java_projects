@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.faenko.clientDatabase.models.Client" table="client" dynamic-insert="true" dynamic-update="true">
+        <!-- Информация для debug -->
+        <meta attribute="class-description">
+            Этот класс содержит детали пользователя
+        </meta>
+        <id name="id" type="int">
+            <column name="uid" />
+            <generator class="increment"/>
+        </id>
+        <property name="surname" column="surname" type="string"/>
+        <property name="name" column="name" type="string"/>
+        <property name="patronymic" column="patronymic" type="string"/>
+        <property name="phoneMobile" column="phoneMobile" type="string"/>
+        <property name="phoneHome" column="phoneHome" type="string"/>
+        <property name="address" column="address" type="string"/>
+        <property name="birthDate" column="birthDate" type="string"/>
+        <one-to-one name="passport" class="com.faenko.clientDatabase.models.Passport" cascade="all"/>
+    </class>
+</hibernate-mapping>

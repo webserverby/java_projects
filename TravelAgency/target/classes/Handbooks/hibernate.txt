@@ -1,0 +1,68 @@
+ВСЕ ЗАПРОСЫ ПИШУТСЯ ВНУТРИ ТРАНЗАКЦИИ !
+
+========= SQL запросы в Hibernate =========
+Пример:
+
+SQLQuery query = session.createSQLQuery("<запрос>");
+// для корректной работы нужно указать имя сущности, какая используется в запросе
+query.addEntity = ("<необязательный параметр. Сюда вносится alias таблицы", <имя сущности предоставленной hibernate>);
+
+// Например:
+query.addEntity = ("c", Client.class);
+// в случае если в запросе пристуствуют какие-то join-ы, то нужно уведомить с помощью следующей команды
+query.addJoin("<name_alias>", "указываем имя поля в классе, какой имеет ссылку на класс используемый в запросе");
+
+// Например:
+query.addJoin("p", "c.pet"); // в классе клиента есть ссылка на класс питомца
+
+
+========= Criteria в Hibernate =========
+
+// Нужно создать переменную критерии, в какую мы занесем класс, с каким работаем
+Criteria criteria = session.createCriteria(Client.class)
+
+// После инициализации Criteria, можно вызвать сразу метод list(), для получения всего списка из бд
+List<Client> clients = criteria.list();
+
+// Для обхода списка подойдет for each
+
+// Для того, чтобы в запросе имитировать ключевое слово where, для поиска нужного значения,
+// можно использовать следующее:
+criteria.add(Restrictions.eq("name", "Влад");
+
+// Значение value больше 400:
+criteria.add(Restrictions.gt("value", 400);
+
+// Значение value больше или равно 400:
+criteria.add(Restrictions.ge("value", 400);
+
+// Таких запросов можно делать сколько угодно, они будут добавляться как AND в sql-запросе
+// Запрос сверху будет равен запросу: select * from client where name = "Влад";
+
+// Чтобы имитировать OR в запросе:
+criteria.add(Restrictions.or(Restrictions.eq("id", 4)));
+
+// Для имитации IN, можно создать массив объектов и передать их в тот же самый класс Restrictions
+int[] arr_id = {1,4,6};
+criteria.add(Restrictions.in("id", arr_id); // Выведем клиентов у каких id равен 1, 4, 6
+
+// BETWEEN:
+criteria.add(Restrictions.between("id", 2, 6); // выведем клиентов у каких id от 2 до 6
+
+// LIKE:
+// Есть два метода в классе Restrictions, это "like" и "ilike", в первом по умолчанию проценты с двух сторон,
+// а во втором методе нужно задавать их вручную
+
+// NOT (IN, BETWEEN, LIKE, etc.)
+criteria.add(Restrictions.not(Restrictions.in("id", arr_id))); // выведем все id какие не равны 1, 4, 6
+
+// ORDER BY
+criteria.addOrder(Order.asc("id"); // сортируем по id клиента
+
+// ALIAS
+// При создании критерии, можем сразу задать алиас
+Criteria criteria = session.createCriteria(Client.class, "client");
+
+// JOIN
+// Присоединяем таблицу Pet
+criteria.createCriteria("Client.pet", "pet"); // задаем имя поля, какое есть в таблице клиент, после задаем алиас
