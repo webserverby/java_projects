@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="450.0" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.faenko.mavenjavafxcosts.controller.MainController">
+    <children>
+        <HBox maxHeight="100.0" prefHeight="60.0">
+            <children>
+                <ComboBox fx:id="boxSelect" maxHeight="30.0" onAction="#actionComboBox" prefHeight="30.0" prefWidth="160.0" styleClass="comboBox">
+                    <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="20.0" top="20.0" />
+                    </HBox.margin></ComboBox>
+                <Button fx:id="btnAdd" contentDisplay="RIGHT" maxWidth="130.0" mnemonicParsing="false" onAction="#actionButtonPressed" prefHeight="40.0" prefWidth="120.0" styleClass="default" text="Добавить">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <HBox.margin>
+                        <Insets left="10.0" right="10.0" top="16.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="btnDelete" maxWidth="130.0" mnemonicParsing="false" onAction="#actionButtonPressed" prefHeight="40.0" prefWidth="120.0" text="Удалить">
+                    <HBox.margin>
+                        <Insets right="10.0" top="16.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+            <VBox.margin>
+                <Insets bottom="10.0" />
+            </VBox.margin>
+        </HBox>
+        <AnchorPane prefHeight="50.0" VBox.vgrow="ALWAYS">
+            <children>
+                <TableView fx:id="tableBuy" prefHeight="200.0" prefWidth="394.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                        <TableColumn fx:id="columnPayment" minWidth="120.0" prefWidth="120.0" sortable="false" text="Платежи" />
+                        <TableColumn fx:id="columnDate" minWidth="75.0" prefWidth="75.0" sortable="false" text="Дата" />
+                        <TableColumn fx:id="columnNumber" minWidth="75.0" prefWidth="75.0" sortable="false" text="Показания" />
+                        <TableColumn fx:id="columnSum" minWidth="75.0" prefWidth="75.0" sortable="false" text="Стоимость" />
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                    <padding>
+                        <Insets top="5.0" />
+                    </padding>
+                </TableView>
+            </children>
+            <VBox.margin>
+                <Insets bottom="15.0" left="10.0" right="10.0" />
+            </VBox.margin>
+        </AnchorPane>
+        <AnchorPane prefHeight="30.0">
+            <children>
+                <Label fx:id="labelSum" styleClass="label-bright" text="Количество записей:" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+                    <padding>
+                        <Insets bottom="10.0" left="25.0" right="25.0" />
+                    </padding>
+                </Label>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>

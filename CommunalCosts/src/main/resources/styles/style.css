@@ -1,0 +1,108 @@
+.background {
+    -fx-background-color: #FFFFFF;
+}
+/* Названия во втором окне */
+.label {
+    -fx-font-size: 11pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: #000000;
+    -fx-opacity: 0.8;
+}
+
+/* Количество записей */
+.label-bright {
+    -fx-font-size: 11pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: #000000;
+    -fx-opacity: 1;
+}
+
+.table-view {
+    -fx-font-size: 12pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-base: #00BFFF;
+    -fx-control-inner-background:  white;
+    -fx-background-color: #00BFFF;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 5;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-size: 35;
+    -fx-border-width: 0 0 1 0;
+    -fx-background-color: transparent;
+
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 12pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+    -fx-alignment: center-left;
+    -fx-opacity: 1;
+}
+
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: #00BFFF;
+    -fx-table-cell-border-color: #00BFFF;
+}
+
+.text-field {
+    -fx-font-size: 11pt;
+    -fx-text-fill: #000000;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-background-radius: 0, 0, 0, 0;
+}
+
+.button {
+    -fx-padding: 5 22 5 22;
+    -fx-border-color: #FFFFFF;
+    -fx-border-width: 2;
+    -fx-background-radius: 0;
+    -fx-background-color: #00BFFF;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 11pt;
+    -fx-text-fill: #FFFFFF;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.button:hover {
+    -fx-background-color: #0098CA;
+}
+
+.button:pressed, .button:default:hover:pressed {
+    -fx-background-color: white;
+    -fx-text-fill: #1d1d1d;
+}
+
+.comboBox  {
+    -fx-background-color: transparent, #00BFFF, transparent, #00BFFF;
+    -fx-background-radius: 0, 0, 0, 0;
+    -fx-padding: 0.166667em;
+}
+
+
+.comboBox .list-cell
+{
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 11pt;
+    -fx-text-fill: #000000;
+}
+
+.combo-box .cell:selected {
+    -fx-text-fill: white;
+}
+
+.comboBox:hover {
+    -fx-background-color: transparent, #00BFFF, transparent, #00BFFF;
+}
+
+.comboBox:disabled {
+    -fx-opacity: .4;
+}
+
